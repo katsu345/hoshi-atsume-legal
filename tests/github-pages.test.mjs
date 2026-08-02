@@ -18,18 +18,17 @@ test("GitHub Pagesの配下URLで全規約と画像を参照する", async () =>
   assert.doesNotMatch(output, /__VINEXT_RSC|modulepreload/);
 });
 
-test("プライバシーポリシーは実装中の外部サービスと端末内データに一致する", async () => {
+test("プライバシーポリシーはRevenueCatのみを外部サービスとして記載する", async () => {
   const output = await html("privacy-policy");
   for (const expected of [
-    "PostHog",
     "RevenueCat",
     "Apple App Store",
     "科目名",
-    "セッションリプレイ（画面録画）は無効",
-    "広告識別子（IDFA）は送信しません",
+    "広告識別子をRevenueCatへ設定しません",
   ]) {
     assert.match(output, new RegExp(expected));
   }
+  assert.doesNotMatch(output, /PostHog|利用状況の分析|セッションリプレイ/);
   assert.doesNotMatch(output, /データは端末の外に出ません/);
 });
 
