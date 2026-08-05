@@ -6,8 +6,8 @@ import { ContactAddress, PageFooter, SiteHeader } from "./site-components";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: { absolute: "星あつめ｜サポート・各種規約" },
-  description: "集中タイマー『星あつめ』のサポート、利用規約、プライバシーポリシー、特定商取引法に基づく表記です。",
+  title: { absolute: "Starlit｜サポート・各種規約" },
+  description: "集中タイマー『Starlit』のサポート、利用規約、プライバシーポリシー、特定商取引法に基づく表記です。",
 };
 
 const documents = [
@@ -34,10 +34,10 @@ export default function Home() {
       <SiteHeader />
 
       <section className="hero" aria-labelledby="page-title">
-        <p className="eyebrow">星あつめ サポート</p>
+        <p className="eyebrow">Starlit サポート</p>
         <h1 id="page-title">集中の時間を、安心して星に。</h1>
         <p>
-          25分の集中で星を灯すタイマー「星あつめ」の各種規約とお問い合わせ窓口です。
+          25分の集中で星を灯すタイマー「Starlit」の各種規約とお問い合わせ窓口です。
         </p>
       </section>
 
@@ -62,7 +62,7 @@ export default function Home() {
           <h2 id="contact-title">不具合・ご意見・事業者情報の開示請求</h2>
         </div>
         <p>
-          アプリ名「星あつめ」、ご利用のiOSバージョン、問題が起きた場面を添えてご連絡ください。
+          アプリ名「Starlit」、ご利用のiOSバージョン、問題が起きた場面を添えてご連絡ください。
           特定商取引法に基づく販売事業者情報の開示をご希望の場合は、その旨を明記してください。
         </p>
         <ContactAddress />

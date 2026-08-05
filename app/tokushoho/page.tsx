@@ -30,7 +30,7 @@ export default function TokushohoPage() {
           <tr>
             <th>販売する商品</th>
             <td>
-              「星あつめ」アプリ内の空の着せ替え（非消費型・買い切り）<br />
+              「Starlit」アプリ内の空の着せ替え（非消費型・買い切り）<br />
               ・暁：300円<br />
               ・オーロラ：300円<br />
               ・雪の夜：300円<br />

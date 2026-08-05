@@ -9,7 +9,7 @@ export function SiteHeader() {
     <header className="site-header">
       <Link className="brand" href="/">
         <span aria-hidden="true" className="brand-mark">✦</span>
-        星あつめ
+        Starlit
       </Link>
       <nav aria-label="規約ページ">
         <Link href="/terms-of-service">利用規約</Link>
@@ -35,7 +35,7 @@ export function ContactAddress() {
 export function PageFooter() {
   return (
     <footer className="page-footer">
-      <p>© 2026 星あつめ</p>
+      <p>© 2026 Starlit</p>
       <p><Link href="/">サポートトップへ</Link></p>
     </footer>
   );
