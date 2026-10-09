@@ -43,15 +43,16 @@ export function PageFooter() {
 
 export function LegalPage({
   title,
+  updatedAt = "2026年8月2日",
   children,
-}: Readonly<{ title: string; children: React.ReactNode }>) {
+}: Readonly<{ title: string; updatedAt?: string; children: React.ReactNode }>) {
   return (
     <main className="legal-shell">
       <SiteHeader />
       <article className="legal-document">
         <p className="legal-nav"><Link href="/">← サポートトップ</Link></p>
         <h1>{title}</h1>
-        <p className="updated-at">制定・最終更新日：2026年8月2日</p>
+        <p className="updated-at">制定日：2026年8月2日　最終更新日：{updatedAt}</p>
         {children}
       </article>
       <PageFooter />

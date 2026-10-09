@@ -18,18 +18,24 @@ test("GitHub Pagesの配下URLで全規約と画像を参照する", async () =>
   assert.doesNotMatch(output, /__VINEXT_RSC|modulepreload/);
 });
 
-test("プライバシーポリシーはRevenueCatのみを外部サービスとして記載する", async () => {
+// 2026-10-09 アプリに PostHog を導入したため、外部サービスは RevenueCat と PostHog の2つ。
+test("プライバシーポリシーはRevenueCatとPostHogを外部サービスとして記載する", async () => {
   const output = await html("privacy-policy");
   for (const expected of [
     "RevenueCat",
     "Apple App Store",
     "科目名",
     "広告識別子をRevenueCatへ設定しません",
+    "PostHog（利用状況の分析）",
+    "科目名、氏名、メールアドレス、広告識別子は送信しません",
+    "posthog\\.com/privacy",
   ]) {
     assert.match(output, new RegExp(expected));
   }
-  assert.doesNotMatch(output, /PostHog|利用状況の分析|セッションリプレイ/);
+  // アプリはセッションリプレイを使わない。科目名を送る・端末外に出ないの両方の誤記を防ぐ。
+  assert.doesNotMatch(output, /セッションリプレイを(利用|使用)します/);
   assert.doesNotMatch(output, /データは端末の外に出ません/);
+  assert.doesNotMatch(output, /運営者のサーバーへ送信する機能はありません/);
 });
 
 test("利用規約は空の個別所有・パック・非サブスクを説明する", async () => {

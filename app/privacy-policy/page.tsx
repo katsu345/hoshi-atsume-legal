@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "プライバシーポリシー" };
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPage title="プライバシーポリシー">
+    <LegalPage title="プライバシーポリシー" updatedAt="2026年10月9日">
       <p>
         本プライバシーポリシーは、集中タイマーアプリ「Starlit」（以下「本アプリ」）における利用者情報の取扱いを定めます。
         本アプリにはアカウント登録、広告および第三者広告のためのトラッキングはありません。
@@ -22,7 +22,8 @@ export default function PrivacyPolicyPage() {
         <li>通知のオン・オフ、ペイウォール表示済み状態等の設定</li>
       </ul>
       <p>
-        これらの内容を運営者のサーバーへ送信する機能はありません。アプリを削除すると端末内のデータは削除されます。
+        科目名を端末の外へ送信することはありません。集中セッションの予定時間・実行時間・完了状態は、
+        次項のとおり利用状況の分析のために、個人を特定しない形で送信します。アプリを削除すると端末内のデータは削除されます。
         ただし、iOSのバックアップ機能が有効な場合、Appleの仕組みによりバックアップへ含まれることがあります。
       </p>
 
@@ -35,6 +36,18 @@ export default function PrivacyPolicyPage() {
       </p>
       <p>
         <a href="https://www.revenuecat.com/privacy/" rel="noreferrer" target="_blank">RevenueCat Privacy Policy</a>
+      </p>
+
+      <h3>PostHog（利用状況の分析）</h3>
+      <p>
+        本アプリの改善のため、PostHog, Inc.の分析サービスを利用します。
+        PostHogへは、表示した画面、アプリの起動、集中セッションの開始・完了（予定時間・実行時間・星が灯ったか）、
+        購入画面の表示および購入・復元の結果、アプリ・OS・端末の機種に関する技術情報、
+        端末内で生成される匿名のランダムIDが送信されます。
+        科目名、氏名、メールアドレス、広告識別子は送信しません。また、画面の録画や入力内容の収集は行いません。
+      </p>
+      <p>
+        <a href="https://posthog.com/privacy" rel="noreferrer" target="_blank">PostHog Privacy Policy</a>
       </p>
 
       <h3>Apple App Store（決済）</h3>
@@ -52,6 +65,7 @@ export default function PrivacyPolicyPage() {
         <li>本アプリの課金機能の提供および維持</li>
         <li>アプリ内課金の検証、購入済み権利の付与・復元および不正防止</li>
         <li>購入状況の集計・分析</li>
+        <li>本アプリの利用状況の集計・分析および機能の改善</li>
       </ul>
 
       <h2>4. 広告・トラッキング</h2>
@@ -69,7 +83,7 @@ export default function PrivacyPolicyPage() {
       <h2>6. 第三者提供・国外での取扱い</h2>
       <p>
         上記サービスの提供に必要な範囲を除き、利用者情報を第三者へ販売または提供しません。
-        RevenueCatでは、同社のサーバー所在国を含む日本国外で情報が処理されることがあります。
+        RevenueCatおよびPostHogでは、各社のサーバー所在国（米国等）を含む日本国外で情報が処理されることがあります。
       </p>
 
       <h2>7. 保存期間・削除等</h2>
@@ -77,6 +91,7 @@ export default function PrivacyPolicyPage() {
         端末内データは、本アプリ内の操作またはアプリの削除により削除できます。
         外部サービスへ送信された情報は、各サービスの契約設定およびプライバシーポリシーに従って保存・削除されます。
         購入履歴は、購入の復元、会計および不正防止等に必要な期間、AppleまたはRevenueCatに保持されることがあります。
+        利用状況の分析データは、PostHogの保存設定に従って保持されます。
       </p>
       <p>
         外部サービスでは匿名識別子を使用しており、氏名やメールアドレスから記録を特定できない場合があります。
