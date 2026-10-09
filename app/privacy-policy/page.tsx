@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "プライバシーポリシー" };
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPage title="プライバシーポリシー" updatedAt="2026年10月9日">
+    <LegalPage title="プライバシーポリシー" updatedAt="2026年10月10日">
       <p>
         本プライバシーポリシーは、集中タイマーアプリ「Starlit」（以下「本アプリ」）における利用者情報の取扱いを定めます。
         本アプリにはアカウント登録、広告および第三者広告のためのトラッキングはありません。
@@ -42,9 +42,11 @@ export default function PrivacyPolicyPage() {
       <p>
         本アプリの改善のため、PostHog, Inc.の分析サービスを利用します。
         PostHogへは、表示した画面、アプリの起動、集中セッションの開始・完了（予定時間・実行時間・星が灯ったか）、
-        購入画面の表示および購入・復元の結果、アプリ・OS・端末の機種に関する技術情報、
+        購入画面の表示および購入・復元の結果、夜空の共有操作（写した星座の数・共有シートの結果・選ばれた共有先の種類）、
+        アプリ・OS・端末の機種に関する技術情報、
         端末内で生成される匿名のランダムIDが送信されます。
         科目名、氏名、メールアドレス、広告識別子は送信しません。また、画面の録画や入力内容の収集は行いません。
+        共有した画像そのもの、投稿内容および共有相手の情報はPostHogへ送信しません。
       </p>
       <p>
         <a href="https://posthog.com/privacy" rel="noreferrer" target="_blank">PostHog Privacy Policy</a>
