@@ -7,7 +7,14 @@ const output = path.join(root, "_site");
 const basePath = "/hoshi-atsume-legal";
 const publicOrigin = "https://katsu345.github.io";
 const supportEmail = process.env.SUPPORT_EMAIL?.trim() || "support@example.test";
-const routes = ["", "terms-of-service", "privacy-policy", "tokushoho"];
+const routes = [
+  "",
+  "terms-of-service",
+  "privacy-policy",
+  "tokushoho",
+  "en/terms-of-service",
+  "en/privacy-policy",
+];
 
 const workerUrl = new URL("../dist/server/index.js", import.meta.url);
 workerUrl.searchParams.set("export", `${Date.now()}`);

@@ -24,7 +24,7 @@ const documents = [
   {
     href: "/tokushoho",
     title: "特定商取引法に基づく表記",
-    description: "買い切りのアプリ内課金に関する販売条件",
+    description: "Starlit+ の販売条件",
   },
 ] as const;
 
@@ -56,13 +56,33 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section" aria-labelledby="english-title" lang="en">
+        <h2 id="english-title">English</h2>
+        <div className="document-grid">
+          <Link className="document-card" href="/en/terms-of-service">
+            <span>
+              <strong>Terms of Service</strong>
+              <small>English translation (the Japanese version governs)</small>
+            </span>
+            <span aria-hidden="true" className="arrow">→</span>
+          </Link>
+          <Link className="document-card" href="/en/privacy-policy">
+            <span>
+              <strong>Privacy Policy</strong>
+              <small>English translation (the Japanese version governs)</small>
+            </span>
+            <span aria-hidden="true" className="arrow">→</span>
+          </Link>
+        </div>
+      </section>
+
       <section className="contact-panel" aria-labelledby="contact-title">
         <div>
           <p className="eyebrow">お問い合わせ</p>
           <h2 id="contact-title">不具合・ご意見・事業者情報の開示請求</h2>
         </div>
         <p>
-          アプリ名「Starlit」、ご利用のiOSバージョン、問題が起きた場面を添えてご連絡ください。
+          アプリ名「Starlit」、ご利用の端末とOS（iOS・Android）のバージョン、問題が起きた場面を添えてご連絡ください。
           特定商取引法に基づく販売事業者情報の開示をご希望の場合は、その旨を明記してください。
         </p>
         <ContactAddress />

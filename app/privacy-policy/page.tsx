@@ -7,9 +7,10 @@ export const metadata: Metadata = { title: "プライバシーポリシー" };
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPage title="プライバシーポリシー" updatedAt="2026年10月22日">
+    <LegalPage title="プライバシーポリシー" updatedAt="2026年10月28日">
       <p>
         本プライバシーポリシーは、集中タイマーアプリ「Starlit」（以下「本アプリ」）における利用者情報の取扱いを定めます。
+        本ポリシーは、App Store版（iPhone）とGoogle Play版（Android）の両方に適用されます。
         本アプリにはアカウント登録、広告および第三者広告のためのトラッキングはありません。
       </p>
 
@@ -25,14 +26,15 @@ export default function PrivacyPolicyPage() {
       <p>
         科目名および試験の名前・日付を端末の外へ送信することはありません。集中セッションの予定時間・実行時間・完了状態は、
         次項のとおり利用状況の分析のために、個人を特定しない形で送信します。アプリを削除すると端末内のデータは削除されます。
-        ただし、iOSのバックアップ機能が有効な場合、Appleの仕組みによりバックアップへ含まれることがあります。
+        ただし、iPhoneでiOSのバックアップ機能が有効な場合、Appleの仕組みによりバックアップへ含まれることがあります。
+        Android版の本アプリは、Androidのバックアップ機能の対象にしていません。
       </p>
 
       <h2>2. 外部サービスへ送信される情報</h2>
       <h3>RevenueCat（アプリ内課金の管理）</h3>
       <p>
         アプリ内課金（買い切りおよび自動更新サブスクリプション）の検証、購入済み権利の付与・更新・復元、不正防止および購入状況の分析のため、RevenueCat, Inc.を利用します。
-        RevenueCatへは、匿名のApp User ID、App Storeのレシートおよび購入履歴、権利状態、アプリ・OS・端末に関する技術情報、最終利用時刻等が送信されます。
+        RevenueCatへは、匿名のApp User ID、App StoreまたはGoogle Playの購入情報（レシート、購入トークンおよび購入履歴）、権利状態、アプリ・OS・端末に関する技術情報、最終利用時刻等が送信されます。
         本アプリは独自の利用者ID、氏名、メールアドレス、広告識別子をRevenueCatへ設定しません。
       </p>
       <p>
@@ -46,7 +48,7 @@ export default function PrivacyPolicyPage() {
         購入画面の表示（表示したきっかけ）・購入画面で選んだプラン・購入手続きの開始および購入・復元の結果、
         星座図鑑とそのページの表示（Starlit+ だけの星座のページかどうか）、試験日の保存（登録している試験の件数）、
         夜空の共有操作（写した星座の数・共有シートの結果・選ばれた共有先の種類）、
-        アプリ・OS・端末の機種に関する技術情報（App Store版かテスト版かの別を含む）、
+        アプリ・OS・端末の機種に関する技術情報（ストアから入手した版かテスト版かの別を含む）、
         端末内で生成される匿名のランダムIDが送信されます。
         科目名、試験の名前・日付、氏名、メールアドレス、広告識別子は送信しません。また、画面の録画や入力内容の収集は行いません。
         共有した画像そのもの、投稿内容および共有相手の情報はPostHogへ送信しません。
@@ -55,13 +57,15 @@ export default function PrivacyPolicyPage() {
         <a href="https://posthog.com/privacy" rel="noreferrer" target="_blank">PostHog Privacy Policy</a>
       </p>
 
-      <h3>Apple App Store（決済）</h3>
+      <h3>Apple App Store・Google Play（決済）</h3>
       <p>
-        アプリ内課金の決済はAppleが処理します。運営者はクレジットカード番号等の決済手段情報を取得しません。
-        Appleによる情報の取扱いはAppleのプライバシーポリシーに従います。
+        アプリ内課金の決済は、App Store版ではAppleが、Google Play版ではGoogleが処理します。運営者はクレジットカード番号等の決済手段情報を取得しません。
+        各社による情報の取扱いは、各社のプライバシーポリシーに従います。
       </p>
       <p>
         <a href="https://www.apple.com/jp/legal/privacy/" rel="noreferrer" target="_blank">Apple プライバシーポリシー</a>
+        {" / "}
+        <a href="https://policies.google.com/privacy?hl=ja" rel="noreferrer" target="_blank">Google プライバシー ポリシー</a>
       </p>
 
       <h2>3. 利用目的</h2>
@@ -76,12 +80,12 @@ export default function PrivacyPolicyPage() {
       <h2>4. 広告・トラッキング</h2>
       <p>
         本アプリは広告を表示せず、利用者情報を第三者広告の配信または広告効果測定に利用しません。
-        他社のアプリ・ウェブサイトを横断した追跡を行わず、広告識別子（IDFA）を取得しません。
+        他社のアプリ・ウェブサイトを横断した追跡を行わず、広告識別子（iPhoneのIDFA、Androidの広告ID）を取得しません。
       </p>
 
       <h2>5. 通知</h2>
       <p>
-        利用者が設定画面で有効にした場合、iOSの許可を得て夜のリマインド通知を端末内で予約します。
+        利用者が設定画面で有効にした場合、OS（iOSまたはAndroid）の許可を得て、タイマー終了や夜のリマインドの通知を端末内で予約します。
         通知の本文やスケジュールを運営者のサーバーへ送信しません。通知は設定画面からいつでも無効にできます。
       </p>
 
@@ -95,7 +99,7 @@ export default function PrivacyPolicyPage() {
       <p>
         端末内データは、本アプリ内の操作またはアプリの削除により削除できます。
         外部サービスへ送信された情報は、各サービスの契約設定およびプライバシーポリシーに従って保存・削除されます。
-        購入履歴は、購入の復元、会計および不正防止等に必要な期間、AppleまたはRevenueCatに保持されることがあります。
+        購入履歴は、購入の復元、会計および不正防止等に必要な期間、Apple、GoogleまたはRevenueCatに保持されることがあります。
         利用状況の分析データは、PostHogの保存設定に従って保持されます。
       </p>
       <p>
@@ -116,6 +120,12 @@ export default function PrivacyPolicyPage() {
 
       <h2>10. お問い合わせ</h2>
       <ContactAddress />
+
+      <h2>11. 翻訳</h2>
+      <p>
+        本ポリシーは日本語を正本とします。英語その他の翻訳と日本語版との間に相違がある場合は、日本語版が優先します。
+        英語版：<a href="/en/privacy-policy">Privacy Policy (English)</a>
+      </p>
     </LegalPage>
   );
 }
